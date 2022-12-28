@@ -1,0 +1,12 @@
+my_prefix=/Users/zuguorui/work_space/FFmpeg_build
+prefix=${my_prefix}/external-lib/x265
+exec_prefix=${prefix}
+libdir=${prefix}/android/armv7-a
+includedir=${prefix}/include
+
+Name: x265
+Description: H.265/HEVC video encoder
+Version: 3.4
+Libs: -L${libdir} -lx265
+Libs.private: -lc++ -lm -lgcc -ldl -lgcc -ldl -ldl
+Cflags: -I${includedir}

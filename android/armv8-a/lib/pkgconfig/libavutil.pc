@@ -1,0 +1,14 @@
+prefix=/Users/zuguorui/work_space/FFmpeg_build/android/armv8-a
+exec_prefix=${prefix}
+libdir=/Users/zuguorui/work_space/FFmpeg_build/android/armv8-a/lib
+includedir=/Users/zuguorui/work_space/FFmpeg_build/android/armv8-a/include
+
+Name: libavutil
+Description: FFmpeg utility library
+Version: 56.70.100
+Requires: 
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavutil 
+Libs.private: -pthread -lm
+Cflags: -I${includedir}

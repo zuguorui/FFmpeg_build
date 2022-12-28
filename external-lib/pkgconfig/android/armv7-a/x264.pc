@@ -1,0 +1,12 @@
+my_prefix=/Users/zuguorui/work_space/FFmpeg_build
+prefix=${my_prefix}/external-lib/x264
+exec_prefix=${prefix}
+libdir=${prefix}/android/armv7-a
+includedir=${prefix}/include
+
+Name: x264
+Description: H.264 (MPEG4 AVC) encoder library
+Version: 0.164.3095M
+Libs: -L${libdir} -lx264 
+Libs.private: -lm -ldl
+Cflags: -I${includedir} -DX264_API_IMPORTS

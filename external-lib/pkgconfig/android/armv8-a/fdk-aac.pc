@@ -1,0 +1,12 @@
+my_prefix=/Users/zuguorui/work_space/FFmpeg_build
+prefix=${my_prefix}/external-lib/fdk-aac
+exec_prefix=${prefix}
+libdir=${prefix}/android/armv8-a
+includedir=${prefix}/include
+
+Name: Fraunhofer FDK AAC Codec Library
+Description: AAC codec library
+Version: 2.0.0
+Libs: -L${libdir} -lfdk-aac 
+Libs.private: -lm 
+Cflags: -I${includedir}

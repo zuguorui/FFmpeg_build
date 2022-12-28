@@ -1,0 +1,15 @@
+# libaom pkg-config.
+my_prefix=/Users/zuguorui/work_space/FFmpeg_build
+prefix=${my_prefix}/external-lib/aom
+exec_prefix=${prefix}
+includedir=${prefix}/include/
+libdir=${prefix}/android/armv8-a
+
+Name: aom
+Description: Alliance for Open Media AV1 codec library v3.5.0.
+Version: 3.5.0
+Requires:
+Conflicts:
+Libs: -L${libdir} -laom
+Libs.private: -lm -lpthread
+Cflags: -I${includedir}
