@@ -5,10 +5,10 @@ includedir=/Users/zuguorui/work_space/FFmpeg_build/android/armv7-a/include
 
 Name: libavutil
 Description: FFmpeg utility library
-Version: 56.70.100
+Version: 58.2.100
 Requires: 
 Requires.private: 
 Conflicts:
 Libs: -L${libdir}  -lavutil 
-Libs.private: -pthread -lm
+Libs.private: -pthread -lm -latomic
 Cflags: -I${includedir}

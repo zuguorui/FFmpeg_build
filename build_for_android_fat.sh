@@ -3,6 +3,8 @@
 # Build FFmpeg fat so library, include libaom, libmp3lame, libfdk-aac, libx264, libx265. This project just for personal use and study.
 # You can't use this for buisness usage.
 
+# Based on FFmpeg 6.0, which support av1_mediacodec and Android NDK MediaCodec.
+
 # FFmpeg find libraries by pkg-config. All external libraries are put in ./external-lib. If the library has pc file, I put the pc file
 # in ./external-lib/pkgconfig/$CPU/. aom, fdk-aac, x264, x265 are configured this way.
 # Some libraries won't build pc file, you can put the include path to cflags and library path to ldflags, such as mp3lame.
@@ -90,7 +92,15 @@ export PKG_CONFIG_PATH=$PKG_DIR
 --cross-prefix="$CROSS_PREFIX" \
 --target-os=android \
 --enable-mediacodec \
+--enable-hwaccels \
 --enable-jni \
+--enable-decoder=av1_mediacodec \
+--enable-decoder=h264_mediacodec \
+--enable-decoder=hevc_mediacodec \
+--enable-decoder=mpeg2_mediacodec \
+--enable-decoder=mpeg4_mediacodec \
+--enable-decoder=vp8_mediacodec \
+--enable-decoder=vp9_mediacodec \
 --arch="$ARCH" \
 --cpu="$CPU" \
 --cc="$CC" \
